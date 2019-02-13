@@ -61,9 +61,9 @@ public class Owner extends Person {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets;
-    
+    /*
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-    private Set<Bill> bills;
+    private Set<Bill> bills;*/
 
 
     public String getAddress() {
@@ -114,7 +114,7 @@ public class Owner extends Person {
         pet.setOwner(this);
     }
     
-    protected Set<Bill> getBillsInternal() {
+    /*protected Set<Bill> getBillsInternal() {
         if (this.bills == null) {
             this.bills = new HashSet<>();
         }
@@ -136,7 +136,7 @@ public class Owner extends Person {
             getBillsInternal().add(bill);
         }
         bill.setOwner(this);
-    }
+    }*/
 
     /**
      * Return the Pet with the given name, or null if none found for this Owner.
