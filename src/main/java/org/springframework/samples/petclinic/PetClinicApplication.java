@@ -16,8 +16,11 @@
 
 package org.springframework.samples.petclinic;
 
+import java.util.Date;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.samples.petclinic.bill.Bill;
 
 /**
  * PetClinic Spring Boot Application.
@@ -29,6 +32,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PetClinicApplication {
 
     public static void main(String[] args) throws Exception {
+    	Bill factura = new Bill();
+    	factura.setCuantia(200.0);
+    	factura.setFecha(new Date());
+    	factura.setNum_id(1);
         SpringApplication.run(PetClinicApplication.class, args);
     }
 

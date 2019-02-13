@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class JDBCApplication {
 
-	public static void main(String[] args) {
+	/* public static void main(String[] args) {
 		System.out.println("-------- Test de conexión con MySQL ------------");
 
 		try {
@@ -81,7 +81,7 @@ public class JDBCApplication {
 				preparedStatement.setString(3, "Calle Ruina"); //direccion
 				preparedStatement.setString(4, "Madrid"); //ciudad
 				preparedStatement.setString(5, "666696969"); //telefono
-				preparedStatement.executeUpdate(); */
+				preparedStatement.executeUpdate(); 
 		    
 		} catch (SQLException e) {
 			System.out.println("Connection Failed! Check output console");
@@ -101,7 +101,7 @@ public class JDBCApplication {
 		         	se.printStackTrace();
 		    }
 		}
-	}
+	} */
 
 }
 
