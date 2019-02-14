@@ -51,12 +51,12 @@ public class HibernateApplication implements CommandLineRunner {
 	@Autowired
 	VisitRepository visitRepository;
 	
-
+/*
     public static void main(String[] args) throws Exception {
         SpringApplication.run(HibernateApplication.class, args);
         
     }
-    
+*/   
     
     
     @Override
@@ -91,6 +91,7 @@ public class HibernateApplication implements CommandLineRunner {
 		for(Visit v : visits) {
 			System.out.println(v.toString());
 		}	
+		
     }
 
 }
