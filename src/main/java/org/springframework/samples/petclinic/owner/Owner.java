@@ -61,9 +61,22 @@ public class Owner extends Person {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets;
-    /*
+    
+    
+    /* ------ Incluimos la relación con la tabla de facturas ------ //
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-    private Set<Bill> bills;*/
+    private Set<Bill> bills;
+    
+    public Set<Bill> getBills() {
+	return bills;
+    }
+
+    public void setBills(Set<Bill> bills) {
+	this.bills = bills;
+    }
+    // ------- Fin de la inclusión ---------- */
+
+
 
 
     public String getAddress() {
@@ -113,30 +126,6 @@ public class Owner extends Person {
         }
         pet.setOwner(this);
     }
-    
-    /*protected Set<Bill> getBillsInternal() {
-        if (this.bills == null) {
-            this.bills = new HashSet<>();
-        }
-        return this.bills;
-    }
-
-    protected void setBillsInternal(Set<Bill> bills) {
-        this.bills = bills;
-    }
-    
-    public List<Bill> getBills() {
-        List<Bill> sortedBills = new ArrayList<>(getBillsInternal());
-        PropertyComparator.sort(sortedBills, new MutableSortDefinition("num_id", true, true));
-        return Collections.unmodifiableList(sortedBills);
-    }
-
-    public void addBill(Bill bill) {
-        if (bill.isNew()) {
-            getBillsInternal().add(bill);
-        }
-        bill.setOwner(this);
-    }*/
 
     /**
      * Return the Pet with the given name, or null if none found for this Owner.
